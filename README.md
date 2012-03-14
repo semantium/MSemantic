@@ -16,7 +16,7 @@ We offer a [User Group][msem-ug] to to file bug reports, feature requests and ge
 
 ##Acknowledgements##
 
-Kudos to [Martin Hepp][MH], [Alex Stolz][AS] and [Andreas Radinger][AR] for continuous feedback and help maturing this effort.
+Kudos to [Martin Hepp][MH], [Alex Stolz][AS] and [Andreas Radinger][AR] for continuous feedback and help maturing this effort, and to [Michael Lambertz][mila] for the early releases.
 
 ##Author##
 Kurt Uwe Stoll
@@ -31,3 +31,4 @@ Kurt Uwe Stoll
 [AR]: http://www.unibw.de/ebusiness/team/andreas-radinger/
 [msem-mailchimp]: http://eepurl.com/ibvqY
 [mageconnect-msem]: http://www.magentocommerce.com/magento-connect/semantium/extension/2838/semantium_msemanticbasic#overview
+[mila]: http://michaellambertz.net/ 
