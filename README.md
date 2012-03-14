@@ -10,10 +10,6 @@ At the same time, your shop will be more accessible for browser extensions and m
 
 We run a [mailing list][msem-mailchimp], where we announce major releases.
 
-#Github#
-
-MSemantic is under the [LGPL][lgpl] license. It is hosted on [github][msem-github], feel free to fork and file bugs!
-
 #Google Group#
 
 We offer a [User Group][msem-ug] to to file bug reports, feature requests and general usage questions.
