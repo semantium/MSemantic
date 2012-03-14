@@ -6,18 +6,20 @@ At the same time, your shop will be more accessible for browser extensions and m
 
 [Get extension key on magento connect][mageconnect-msem]
 
-#Mailing List#
+##Mailing List##
 
 We run a [mailing list][msem-mailchimp], where we announce major releases.
 
-#Google Group#
+##Google Group##
 
 We offer a [User Group][msem-ug] to to file bug reports, feature requests and general usage questions.
 
-#Acknowledgements
+##Acknowledgements##
 
 Kudos to [Martin Hepp][MH], [Alex Stolz][AS] and [Andreas Radinger][AR] for continuous feedback and help maturing this effort.
 
+##Author##
+Kurt Uwe Stoll
 
 [mage]: http://www.magentocommerce.com/
 [grs]: http://support.google.com/webmasters/bin/topic.py?hl=en&topic=21997
