@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * MSemantic Magento Module
+ * @package Semantium_MSemanticBasic
+ * @copyright (c) 2010 Semantium, Uwe Stoll <stoll@semantium.de>
+ * @author Michael Lambertz <michael@digitallifedesign.net>
+ * This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 3 of the License, or (at your option) any later version.
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ * You should have received a copy of the GNU General Public License along with this program; if not, see <http://www.gnu.org/licenses/>
+**/
+ -->
+<layout version="0.1.0">
+	<catalog_product_view>
+		<reference name="content">
+			<block type="semantium_msemanticbasic/product" name="msemanticbasic.product" before="product.info" />
+		</reference>
+		<reference name="head">
+			<action method="setContentType"><content>application/xhtml+xml; charset=UTF-8</content></action>
+		</reference>
+	</catalog_product_view>
+	<cms_page>
+		<reference name="before_body_end">
+			<block type="semantium_msemanticbasic/business" name="msemanticbasic.business" />
+		</reference>
+		<reference name="head">
+			<action method="setContentType"><content>application/xhtml+xml; charset=UTF-8</content></action>
+			<!-- only works in magento >1.4 -->
+			<!--<action method="addItem"><type>link_rel</type><name>/semanticweb.rdf</name><params>rel="meta" type="application/rdf+xml" title="RDF/XML data for this webshop"</params></action>-->
+		</reference>
+	</cms_page>
+	<default>
+		<reference name="footer">
+			<block type="semantium_msemanticbasic/thanks" name="msemanticbasic.thanks" />
+		</reference>
+	</default>
+</layout>

@@ -1,0 +1,684 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * MSemanticBasic Magento Extension
+ * @package Semantium_MSemanticBasic
+ * @copyright (c) 2010 Semantium, Uwe Stoll <stoll@semantium.de>
+ * @author Michael Lambertz <michael@digitallifedesign.net>
+ * This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 3 of the License, or (at your option) any later version.
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ * You should have received a copy of the GNU General Public License along with this program; if not, see <http://www.gnu.org/licenses/>
+**/
+ -->
+<config>
+
+<!--
+  TABS: in msemanticbasic
+-->
+	<tabs>
+        <msemanticbasic translate="label" module="msemanticbasic">
+            <label>MSemantic</label>
+            <sort_order>300</sort_order>
+        </msemanticbasic>
+    </tabs>
+    
+	<sections>
+		<semantium translate="label" module="msemanticbasic">
+			<label>Semantic SEO Settings</label>
+			<tab>msemanticbasic</tab>
+			<sort_order>310</sort_order>
+			<show_in_default>1</show_in_default>
+			<show_in_website>1</show_in_website>
+			<show_in_store>1</show_in_store>
+			
+			<groups>
+				<basicsettings translate="label">
+					<label>Basic Settings</label>
+					<comment><![CDATA[  <b>Important: Please submit the URI of your sitemap (e.g. http://www.la-mousson.de/sitemap.xml) to the GoodRelations Notification Service at <a href="http://grnotify.appspot.com">http://gr-notify.appspot.com</a>. This will help search engines to find and update your products more easily.</b><br/><a href="http://gr-notify.appspot.com" style="line-height: 1;text-decoration:none;display: inline-block;padding: 8px 12px;background-color:#66ff66;-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.40);
+-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.40);
+text-shadow: -1px -1px 0px rgba(0,0,0,0.15);font-family: Arial, sans-serif;text-transform:uppercase;font-size:14px;letter-spacing:1px;color:#fff;cursor:pointer;">Register your site now -></a>
+</FORM>   ]]></comment>
+					<frontend_type>text</frontend_type>
+					<sort_order>10</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					
+					<fields>
+						<!-- 0 -->  
+						<active translate="label">
+							<label>Enabled</label>
+							<comment><![CDATA[<b>enable</b> or <b>disable</b> MSemantic RDFa code generation ]]></comment>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>0</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</active>
+						<setfooterlink translate="label">
+							<label>Semantic Web ready Link</label>
+							<comment><![CDATA[ display link to MSemantic in the footer of your page  ]]></comment>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>99</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</setfooterlink>
+					</fields>
+				</basicsettings>
+				
+				<businessinformation translate="label">
+					<label>Business Information</label>
+					<comment><![CDATA[   ]]></comment>
+					<frontend_type>text</frontend_type>
+					<sort_order>20</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					
+					<fields>
+						<legalname translate="label">
+							<label>Legal Name</label>
+							<comment><![CDATA[ Magento v1.4+: if this field is empty, MSemantic will use the store name from general settings / store information ]]></comment>
+							<frontend_type>text</frontend_type>
+							<sort_order>100</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</legalname>
+					</fields>
+				</businessinformation>
+				
+				<address translate="label">
+					<label>Company Address</label>
+					<comment><![CDATA[  <p>Please fill in some basic informations about your business.</p>   ]]></comment>
+					<frontend_type>text</frontend_type>
+					<sort_order>30</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					
+					<fields>
+						<!-- 100 Contact Data -->
+						<streetaddress translate="label">
+							<label>Street Address</label>
+							<comment><![CDATA[  ]]></comment>
+							<frontend_type>text</frontend_type>
+							<sort_order>120</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</streetaddress>
+						<postalcode translate="label">
+							<label>Zip/Postal Code</label>
+							<comment><![CDATA[     ]]></comment>
+							<frontend_type>text</frontend_type>
+							<sort_order>121</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</postalcode>
+						<locality translate="label">
+							<label>City</label>
+							<comment><![CDATA[     ]]></comment>
+							<frontend_type>text</frontend_type>
+							<sort_order>122</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</locality>
+						<countryname translate="label">
+							<label>Country</label>
+							<comment><![CDATA[     ]]></comment>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_locale_country</source_model>
+							<sort_order>124</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</countryname>
+						
+						<!-- Yahoo wants vcard:tel to be a literal, vcard2006 wants it to be a resource, so maybe change to span property="vcard:tel" resource="tel:+498960040"/ -->
+						<tel translate="label">
+							<label>Phone Number</label>
+							<comment><![CDATA[  Development Info: Yahoo wants vcard:tel to be a literal, vcard2006 wants it to be a resource, so maybe change to tel:+498960040   ]]></comment>
+							<frontend_type>text</frontend_type>
+							<sort_order>125</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</tel>
+						<email translate="label">
+							<label>Email</label>
+							<comment><![CDATA[   ]]></comment>
+							<frontend_type>text</frontend_type>
+							<sort_order>126</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</email>
+					</fields>
+				</address>
+				
+				<pos_address translate="label">
+					<label>Point of sale address</label>
+					<comment><![CDATA[  <p>Please fill in some basic informations about your POS (point of sale).</p>   ]]></comment>
+					<frontend_type>text</frontend_type>
+					<sort_order>40</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					
+					<fields>
+						
+						<!-- 1 -->  
+						<haspos translate="label">
+							<label>POS available?</label>
+							<comment><![CDATA[ if NOT the information below isn't used anymore. ]]></comment>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>1</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</haspos>
+						
+						<!-- 10 -->  
+						<usefromcompany translate="label">
+							<label>Same POS address as company</label>
+							<comment><![CDATA[ If enabled, the Extension uses address data from the company. ]]></comment>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>10</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</usefromcompany>
+						
+						<!-- 100 Contact Data -->
+						<streetaddress translate="label">
+							<label>Street Address</label>
+							<comment><![CDATA[  ]]></comment>
+							<frontend_type>text</frontend_type>
+							<sort_order>120</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</streetaddress>
+						<postalcode translate="label">
+							<label>Zip/Postal Code</label>
+							<comment><![CDATA[     ]]></comment>
+							<frontend_type>text</frontend_type>
+							<sort_order>121</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</postalcode>
+						<locality translate="label">
+							<label>City</label>
+							<comment><![CDATA[     ]]></comment>
+							<frontend_type>text</frontend_type>
+							<sort_order>122</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</locality>
+						<countryname translate="label">
+							<label>Country</label>
+							<comment><![CDATA[     ]]></comment>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_locale_country</source_model>
+							<sort_order>124</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</countryname>
+						
+						<!-- Yahoo wants vcard:tel to be a literal, vcard2006 wants it to be a resource, so maybe change to span property="vcard:tel" resource="tel:+498960040"/ -->
+						<tel translate="label">
+							<label>Phone Number</label>
+							<comment><![CDATA[  Development Info: Yahoo wants vcard:tel to be a literal, vcard2006 wants it to be a resource, so maybe change to tel:+498960040   ]]></comment>
+							<frontend_type>text</frontend_type>
+							<sort_order>125</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</tel>
+						<email translate="label">
+							<label>Email</label>
+							<comment><![CDATA[ Sales Email ]]></comment>
+							<frontend_type>text</frontend_type>
+							<sort_order>126</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</email>
+					</fields>
+				</pos_address>
+				
+				<offering translate="label">
+					<label>General offering description</label>
+					<comment><![CDATA[   ]]></comment>
+					<frontend_type>text</frontend_type>
+					<sort_order>200</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					
+					<fields>
+						
+						<!-- 0 -->  
+						<description translate="label">
+							<label>Short description</label>
+							<comment><![CDATA[ Describe generally the type of products you are offering in your shop language ]]></comment>
+							<frontend_type>textarea</frontend_type>
+							<sort_order>0</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</description>
+					</fields>
+				</offering>
+				
+				<payment_options translate="label">
+					<label>Payment options</label>
+					<comment><![CDATA[   ]]></comment>
+					<frontend_type>text</frontend_type>
+					<sort_order>220</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					
+					<fields>
+						 
+						<byBankTransferInAdvance translate="label">
+							<label>ByBankTransferInAdvance</label>
+							<comment><![CDATA[  ]]></comment>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>1</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</byBankTransferInAdvance>
+						
+						<byInvoice translate="label">
+							<label>ByInvoice</label>
+							<comment><![CDATA[  ]]></comment>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>2</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</byInvoice>
+						
+						<cash translate="label">
+							<label>Cash</label>
+							<comment><![CDATA[  ]]></comment>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>3</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</cash>
+						
+						<checkinadvance translate="label">
+							<label>CheckInAdvance</label>
+							<comment><![CDATA[  ]]></comment>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>4</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</checkinadvance>
+						
+						<cod translate="label">
+							<label>COD</label>
+							<comment><![CDATA[  ]]></comment>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>5</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</cod>
+						
+						<directdebit translate="label">
+							<label>DirectDebit</label>
+							<comment><![CDATA[  ]]></comment>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>6</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</directdebit>
+						
+						<googleCheckout translate="label">
+							<label>GoogleCheckout</label>
+							<comment><![CDATA[  ]]></comment>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>7</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</googleCheckout>
+						
+						<paypal translate="label">
+							<label>Paypal</label>
+							<comment><![CDATA[  ]]></comment>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>8</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</paypal>
+						
+						<americanexpress translate="label">
+							<label>AmericanExpress</label>
+							<comment><![CDATA[  ]]></comment>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>9</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</americanexpress>
+						
+						<dinersclub translate="label">
+							<label>DinersClub</label>
+							<comment><![CDATA[  ]]></comment>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>10</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</dinersclub>
+						
+						<discover translate="label">
+							<label>Discover</label>
+							<comment><![CDATA[  ]]></comment>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>11</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</discover>
+						
+						<jcb translate="label">
+							<label>JCB</label>
+							<comment><![CDATA[  ]]></comment>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>12</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</jcb>
+						
+						<mastercard translate="label">
+							<label>MasterCard</label>
+							<comment><![CDATA[  ]]></comment>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>13</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</mastercard>
+						
+						<visa translate="label">
+							<label>VISA</label>
+							<comment><![CDATA[  ]]></comment>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>14</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</visa>
+						
+					</fields>
+				</payment_options>
+				
+
+				<customer_types translate="label">
+					<label>Eligible types of business partners</label>
+					<comment><![CDATA[   ]]></comment>
+					<frontend_type>text</frontend_type>
+					<sort_order>210</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					
+					<fields>
+						<enduser translate="label">
+							<label>End users</label>
+							<comment><![CDATA[     ]]></comment>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>0</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</enduser>
+						<business translate="label">
+							<label>Business</label>
+							<comment><![CDATA[  ]]></comment>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>1</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</business>
+						<reseller translate="label">
+							<label>Resellers</label>
+							<comment><![CDATA[  ]]></comment>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>2</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</reseller>
+						<publicinstitution translate="label">
+							<label>Public institutions</label>
+							<comment><![CDATA[  ]]></comment>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>3</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</publicinstitution>
+					</fields>
+				</customer_types>
+				
+				<delivery_methods translate="label">
+					<label>Delivery Methods</label>
+					<comment><![CDATA[   ]]></comment>
+					<frontend_type>text</frontend_type>
+					<sort_order>230</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					
+					<fields>
+						<dhl translate="label">
+							<label>DHL</label>
+							<comment><![CDATA[  ]]></comment>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>0</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</dhl>
+						<ups translate="label">
+							<label>UPS</label>
+							<comment><![CDATA[  ]]></comment>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>1</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</ups>
+						<mail translate="label">
+							<label>Air or surface mail</label>
+							<comment><![CDATA[ postal services ]]></comment>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>2</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</mail>
+						<fedex translate="label">
+							<label>FedEx</label>
+							<comment><![CDATA[  ]]></comment>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>3</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</fedex>
+						<directdownload translate="label">
+							<label>Direct download</label>
+							<comment><![CDATA[ e.g. for software  ]]></comment>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>4</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</directdownload>
+						<pickup translate="label">
+							<label>Pick up</label>
+							<comment><![CDATA[ Delivery of the goods by picking them up at the store ]]></comment>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>5</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</pickup>
+						<vendorfleet translate="label">
+							<label>Vendor fleet</label>
+							<comment><![CDATA[ Delivery of the goods by using a fleet of vehicles either owned and operated or subcontracted by the vendor ]]></comment>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>6</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</vendorfleet>
+						<freight translate="label">
+							<label>Freight</label>
+							<comment><![CDATA[ Delivery by an unspecified air, sea, or ground freight carrier or cargo company ]]></comment>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>7</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</freight>
+					</fields>
+				</delivery_methods>
+					
+				<validity translate="label">
+					<label>Validity of your statement</label>
+					<comment><![CDATA[   ]]></comment>
+					<frontend_type>text</frontend_type>
+					<sort_order>400</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					
+					<fields>
+						<valid_period translate="label">
+                            <label>Validity Period</label>
+                            <comment><![CDATA[ global validity for all products without individual validity (3rd level) ]]></comment>                            
+                            <frontend_type>select</frontend_type>
+                            <source_model>msemanticbasic/source_valid</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </valid_period>
+						<valid_through translate="label">
+							<label>Valid through</label>
+							<comment><![CDATA[ only used if no period is set (4th level) ]]></comment>
+							<frontend_type>text</frontend_type>
+							<sort_order>3</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</valid_through>
+					</fields>
+				</validity>
+				
+				<strongid translate="strongid">
+					<label>Strong identifier</label>
+					<comment><![CDATA[   ]]></comment>
+					<frontend_type>text</frontend_type>
+					<sort_order>400</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					
+					<fields>
+						<strongid_type translate="label">
+							<label>Strong Identifier Type</label>
+							<comment><![CDATA[ ]]></comment>                            
+							<frontend_type>select</frontend_type>
+							<source_model>msemanticbasic/source_strongid</source_model>
+							<sort_order>1</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</strongid_type>
+						<strongid_db translate="label">
+                               <label>Use Existing Attribute</label>
+                               <frontend_type>select</frontend_type>
+                               <source_model>adminhtml/system_config_source_yesno</source_model>
+                               <sort_order>2</sort_order>
+                               <show_in_default>1</show_in_default>
+                               <show_in_website>1</show_in_website>
+                               <show_in_store>0</show_in_store>
+                        </strongid_db>
+						<strongid_dba translate="label">
+                               <label>Attribute </label>
+                               <frontend_type>select</frontend_type>
+                               <source_model>msemanticbasic/system_config_source_product_attributes</source_model>
+                               <sort_order>10</sort_order>
+                               <show_in_default>1</show_in_default>
+                               <show_in_website>1</show_in_website>
+                               <show_in_store>1</show_in_store>
+                        </strongid_dba>
+					</fields>
+				</strongid>
+				
+			</groups>
+		</semantium>
+		
+	</sections>
+
+</config>
+
+
+
+
