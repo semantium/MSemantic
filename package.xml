@@ -21,10 +21,10 @@ The following ressources emphasize the positive outcome of using GoodRelations:
   <email>stoll@semantium.de</email>
   <active>yes</active>
  </lead>
- <date>2012-03-07</date>
- <time>10:53:34</time>
+ <date>2012-05-02</date>
+ <time>11:37:13</time>
  <version>
-  <release>1.2.6.1</release>
+  <release>1.2.6.5</release>
   <api>1.4.0</api>
  </version>
  <stability>
@@ -46,14 +46,14 @@ Magento 1.3: if you use another language than english or german, than the &quot;
       <dir name="Block">
        <file md5sum="164ff85e939eac555bc06584c733eb2d" name="Business.php" role="magecommunity" />
        <file md5sum="66ff7727bfdc279382d4f55ffa6d5891" name="Datadump.php" role="magecommunity" />
-       <file md5sum="9205a949463a47240fed1cbd4d70db38" name="Product.php" role="magecommunity" />
+       <file md5sum="d5776fd82ceb8ee379f1bdaf8275e22c" name="Product.php" role="magecommunity" />
        <file md5sum="5039b62205679115ebef99b34192df0a" name="Thanks.php" role="magecommunity" />
       </dir> <!-- /Semantium/MSemanticBasic/Block -->
       <dir name="controllers">
        <file md5sum="2d014e2316ba23adb1be2e0821a126ea" name="IndexController.php" role="magecommunity" />
       </dir> <!-- /Semantium/MSemanticBasic/controllers -->
       <dir name="etc">
-       <file md5sum="7a9f65a48874c2892d92d7869df3f6cb" name="config.xml" role="magecommunity" />
+       <file md5sum="b80090aff414d63266d61c6ca506db2f" name="config.xml" role="magecommunity" />
        <file md5sum="e708829b17a24c7bc68d6162fcec5dd0" name="system.xml" role="magecommunity" />
       </dir> <!-- /Semantium/MSemanticBasic/etc -->
       <dir name="Helper">
@@ -86,8 +86,8 @@ Magento 1.3: if you use another language than english or german, than the &quot;
         </dir> <!-- /Semantium/MSemanticBasic/Model/System/Config -->
        </dir> <!-- /Semantium/MSemanticBasic/Model/System -->
        <file md5sum="678c1a77374b33707bacb5ce57c6afc9" name="Business.php" role="magecommunity" />
-       <file md5sum="7d53dadba3a5387151fffd4bfff3b71d" name="GoodRelations.php" role="magecommunity" />
-       <file md5sum="1ddf1fd988f69e5c650f5642781623d7" name="Observer.php" role="magecommunity" />
+       <file md5sum="bb97156fe8d6970f12ec196b41aa32ca" name="GoodRelations.php" role="magecommunity" />
+       <file md5sum="e32bcd03050972775f4f765094783364" name="Observer.php" role="magecommunity" />
        <file md5sum="f7f73eb5d812195156f5f7c2143f1636" name="RDFs.php" role="magecommunity" />
        <file md5sum="a697c5fd451fdf62f8317aae70b5c84c" name="VCard.php" role="magecommunity" />
       </dir> <!-- /Semantium/MSemanticBasic/Model -->
@@ -130,6 +130,7 @@ Magento 1.3: if you use another language than english or german, than the &quot;
         <file md5sum="9d4c7920ded55142506596e87fac901f" name="mysql4-install-1.2.4.php" role="magecommunity" />
         <file md5sum="9d4c7920ded55142506596e87fac901f" name="mysql4-install-1.2.5.php" role="magecommunity" />
         <file md5sum="9d4c7920ded55142506596e87fac901f" name="mysql4-install-1.2.6.1.php" role="magecommunity" />
+        <file md5sum="9d4c7920ded55142506596e87fac901f" name="mysql4-install-1.2.6.5.php" role="magecommunity" />
         <file md5sum="9d4c7920ded55142506596e87fac901f" name="mysql4-install-1.2.6.php" role="magecommunity" />
         <file md5sum="24bb680b77c72bd957d8e941e1c02c07" name="mysql4-upgrade-0.8.0-0.8.1.php" role="magecommunity" />
         <file md5sum="24bb680b77c72bd957d8e941e1c02c07" name="mysql4-upgrade-0.8.1-0.8.2.php" role="magecommunity" />
@@ -162,10 +163,11 @@ Magento 1.3: if you use another language than english or german, than the &quot;
         <file md5sum="b93259ef17eb9ea97b9d153001eb5f57" name="mysql4-upgrade-1.2.4-1.2.5.php" role="magecommunity" />
         <file md5sum="b93259ef17eb9ea97b9d153001eb5f57" name="mysql4-upgrade-1.2.5-1.2.6.php" role="magecommunity" />
         <file md5sum="b93259ef17eb9ea97b9d153001eb5f57" name="mysql4-upgrade-1.2.6-1.2.6.1.php" role="magecommunity" />
+        <file md5sum="b93259ef17eb9ea97b9d153001eb5f57" name="mysql4-upgrade-1.2.6.1-1.2.6.5.php" role="magecommunity" />
         <file md5sum="0168886ab4f6a6c2658fada0f5ff3727" name="script.sh" role="magecommunity" />
        </dir> <!-- /Semantium/MSemanticBasic/sql/msemanticbasic_setup -->
       </dir> <!-- /Semantium/MSemanticBasic/sql -->
-      <file md5sum="76cc8f17282dc95522ea3727660b0e07" name="changelog.txt" role="magecommunity" />
+      <file md5sum="cfa5ab5608430a3056af16c9013e3427" name="changelog.txt" role="magecommunity" />
      </dir> <!-- /Semantium/MSemanticBasic -->
     </dir> <!-- /Semantium -->
    </dir> <!-- / -->

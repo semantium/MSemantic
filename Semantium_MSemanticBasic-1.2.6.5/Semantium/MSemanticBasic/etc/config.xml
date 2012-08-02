@@ -1,0 +1,246 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * MSemanticBasic Magento Extension
+ * @package Semantium_MSemanticBasic
+ * @copyright (c) 2010 Semantium, Uwe Stoll <stoll@semantium.de>
+ * @author Michael Lambertz <michael@digitallifedesign.net>
+ * This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 3 of the License, or (at your option) any later version.
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ * You should have received a copy of the GNU General Public License along with this program; if not, see <http://www.gnu.org/licenses/>
+**/
+ -->
+<config>
+    <modules>
+        <Semantium_MSemanticBasic>
+            <version>1.2.6.5</version>
+            <depends>
+                <Mage_Page />
+            </depends>
+        </Semantium_MSemanticBasic>
+    </modules>
+    
+    <admin>
+      <routers>
+          <msemanticbasic>
+              <use>admin</use>
+              <args>
+                  <module>Semantium_MSemanticBasic</module>
+                  <frontName>admin/msemanticbasic</frontName>
+              </args>
+          </msemanticbasic>
+      </routers>
+  	</admin>
+  	
+  	<frontend>
+	  	<layout>
+			<updates>
+				<MSemanticBasic>
+					<file>msemanticbasic.xml</file>
+				</MSemanticBasic>
+			</updates>
+		</layout>
+		<!--<routers>
+			<msemanticbasic>
+				<use>standard</use>
+					<args>
+						<module>Semantium_MSemanticBasic</module>
+						<frontName>semanticweb.rdf</frontName>
+					</args>
+			</msemanticbasic>
+		</routers>-->
+	</frontend>
+  	
+    <global>
+    	<blocks>
+			<semantium_msemanticbasic>
+				<class>Semantium_MSemanticBasic_Block</class>
+			</semantium_msemanticbasic>
+		</blocks>
+		
+    	<resources>
+          <msemanticbasic_setup>
+              <setup>
+                  <module>Semantium_MSemanticBasic</module>
+                  <class>Semantium_MSemanticBasic_Model_Resource_Eav_Mysql4_Setup</class>
+              </setup>
+              <connection>
+                  <use>core_setup</use>
+              </connection>
+          </msemanticbasic_setup>
+          
+          <msemanticbasic_write>
+              <connection>
+                  <use>core_write</use>
+              </connection>
+          </msemanticbasic_write>
+          
+          <msemanticbasic_read>
+              <connection>
+                  <use>core_read</use>
+              </connection>
+          </msemanticbasic_read>
+	    </resources>
+	    
+	    <helpers>
+	     	<msemanticbasic>
+	      		<class>Semantium_MSemanticBasic_Helper</class>
+	    	</msemanticbasic>
+	    </helpers>
+	    
+		<models>
+			<msemanticbasic>
+				<class>Semantium_MSemanticBasic_Model</class>
+			</msemanticbasic>
+		</models>
+    </global>
+    
+    <adminhtml>    
+         <translate>
+            <modules>
+                <Semantium_MSemanticBasic>
+                    <files>
+                        <default>Semantium_MSemanticBasic.csv</default>
+                    </files>
+                </Semantium_MSemanticBasic>
+            </modules>
+        </translate>
+    	<rewrite>
+    		<system_config_source_product_attributes>Semantium_MSemanticBasic_Model_System_Config_Source_Product_Attributes</system_config_source_product_attributes>
+        </rewrite>
+        <acl>
+          <resources>
+			<all>
+				<title>Allow Everything</title>
+			</all>
+            <admin>
+              <children>
+            	  <catalog>
+            		<children>
+    					<semantium>
+                              <title>Semantium</title>
+    					</semantium>
+    				</children>
+            	  </catalog>
+                  <system>
+                      <children>
+                        <config>
+                          <children>
+                            <semantium>
+                              <title>Semantium</title>
+                            </semantium>
+                          </children>
+                        </config>
+                      </children>
+                  </system>
+              </children>
+            </admin>
+          </resources>
+        </acl>
+    </adminhtml>
+    
+    
+    <crontab>
+        <jobs>
+            <catalog_grnotify_ping>
+            	<!-- daily at 1:00 am -->
+                <schedule><cron_expr>0 1 * * *</cron_expr></schedule>
+                <run>
+                    <model>msemanticbasic/observer::submitSemanticWebData</model>
+                </run>
+            </catalog_grnotify_ping>
+        </jobs>
+    </crontab>
+    
+    
+<!-- BEGIN: setting the default values -->    
+    <default>
+        <semantium>
+        
+            <basicsettings>
+            	<active>1</active>
+            	<setfooterlink>1</setfooterlink>
+            </basicsettings>
+            
+            <businessinformation>
+            	<legalname></legalname>
+            </businessinformation>
+            
+            <address>
+            	<streetaddress></streetaddress>
+            	<postalcode></postalcode>
+            	<locality></locality>
+            	<countryname>US</countryname>
+            	<tel></tel>
+            	<email></email>
+            </address>
+            
+            <pos_address>
+            	<haspos>0</haspos>
+            	<usefromcompany>1</usefromcompany>
+            	<streetaddress></streetaddress>
+            	<postalcode></postalcode>
+            	<locality></locality>
+            	<countryname>US</countryname>
+            	<tel></tel>
+            	<email></email>
+            </pos_address>
+            
+            <offering>
+            	<description></description>
+            </offering>
+            
+            <payment_options>
+            	<mastercard>0</mastercard>
+            	<visa>0</visa>
+            	<americanexpress>0</americanexpress>
+            	<dinersclub>0</dinersclub>
+            	<discover>0</discover>
+            	<openinvoice>0</openinvoice>
+            	<cod>0</cod>
+            	<cash>0</cash>
+            	<checkinadvance>0</checkinadvance>
+            	<banktransferinadvance>0</banktransferinadvance>
+            	<directdebit>0</directdebit>
+            	<paypal>0</paypal>
+            </payment_options>
+            
+            <customer_types>
+            	<enduser>1</enduser>
+            	<business>0</business>
+            	<reseller>0</reseller>
+            	<publicinstitution>0</publicinstitution>
+            </customer_types>
+            
+            <delivery_methods>
+            	<dhl>0</dhl>
+            	<ups>0</ups>
+            	<mail>0</mail>
+            	<fedex>0</fedex>
+            	<directdownload>0</directdownload>
+            	<pickup>0</pickup>
+            	<vendorfleet>0</vendorfleet>
+            	<freight>0</freight>
+            </delivery_methods>
+            
+            <validity>
+            	<valid_period>3</valid_period>
+            	<valid_through>tomorrow</valid_through>
+            </validity>
+            
+            <strongid>
+            	<strongid_type>ean13</strongid_type>
+            	<strongid_db>0</strongid_db>
+            	<strongid_dba>0</strongid_dba>
+            </strongid>
+            
+            <!-- 
+            <tempdefault>
+                <code><![CDATA[// hallo welt (cdata) ]]></code>
+            </tempdefault>
+             -->
+        </semantium>
+    </default>    
+<!-- END: setting default values -->
+
+</config>
