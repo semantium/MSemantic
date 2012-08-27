@@ -1,3 +1,5 @@
+![MSemantic logo](http://semantium.de/msemantic/msemantic-logo.png)
+
 #MSemantic: Rich Snippets and Semantic SEO with GoodRelations#
 
 The free [Magento][mage] extension adds rich data-markup to shop pages so that search engines like Google, Yahoo, and Bing can display richer item previews in the search results ("[Rich Snippets][grs]") with information about prices, availability, delivery options, images*, etc. This typically increases Click-Through-Rates (CTR) by up to 30 %.
