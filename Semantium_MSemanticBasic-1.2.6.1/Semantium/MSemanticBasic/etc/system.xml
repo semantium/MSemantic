@@ -34,7 +34,7 @@
 			<groups>
 				<basicsettings translate="label">
 					<label>Basic Settings</label>
-					<comment><![CDATA[  <b>Important: Please submit the URI of your sitemap (e.g. http://www.la-mousson.de/sitemap.xml) to the GoodRelations Notification Service at <a href="http://grnotify.appspot.com">http://gr-notify.appspot.com</a>. This will help search engines to find and update your products more easily.</b><br/><a href="http://gr-notify.appspot.com" style="line-height: 1;text-decoration:none;display: inline-block;padding: 8px 12px;background-color:#66ff66;-moz-border-radius: 5px;
+					<comment><![CDATA[  <b>Important: Please submit the URI of your sitemap (e.g. http://www.la-mousson.de/sitemap.xml) to the GoodRelations Notification Service at <a href="http://gr-notify.appspot.com">http://gr-notify.appspot.com</a>. This will help search engines to find and update your products more easily.</b><br/><a href="http://gr-notify.appspot.com" style="line-height: 1;text-decoration:none;display: inline-block;padding: 8px 12px;background-color:#66ff66;-moz-border-radius: 5px;
 -webkit-border-radius: 5px;
 -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.40);
 -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.40);
